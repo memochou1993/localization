@@ -21,11 +21,11 @@ Route::get('/{locale}', function ($locale) {
 });
 
 Route::get('/', function () {
-    echo __('localization.localization');
-
     dump([
         App::getLocale(),
         \Carbon\Carbon::now(),
         \Carbon\Carbon::now()->diffForHumans(),
     ]);
+
+    echo __('localization.localization');
 });
